@@ -2,9 +2,10 @@
 
 # Girlypop UwU 🎀
 
-A kawaii **girly-pop / UwU** persona for Claude Code. It reskins Claude Code's voice and demeanor —
-bubbly hype-bestie energy, sparkles, and random Japanese catchphrases — while **retaining 100% of
-Claude Code's engineering ability** (all tools, all rigor, all safety behavior).
+A kawaii **girly-pop / UwU + anime-flavored** persona for Claude Code. It reskins Claude Code's voice
+and demeanor — magical girl energy, anime kaomoji, ~40 Japanese catchphrases, light anime speech
+patterns, and bubbly hype-bestie sparkle — while **retaining 100% of Claude Code's engineering
+ability** (all tools, all rigor, all safety behavior).
 
 ## How it works
 
@@ -76,8 +77,17 @@ plugin, so reference it via the plugin-root variable:
 > { "statusLine": { "type": "command", "command": "~/.claude/statusline-girlypop.sh", "padding": 0 } }
 > ```
 
-The bar shows `🎀 model · 📁 dir · 🌸 ctx% · <random Japanese catchphrase> ✨`. Requires `python3`
+The bar shows `🎀 model · 📁 dir · 🌸 ctx% · <random Japanese catchphrase> <random anime kaomoji>`.
+The phrase pool has ~40 entries; the kaomoji rotates through a curated set of 9. Requires `python3`
 (used to parse the session JSON and force UTF-8 output).
+
+## What's new in v1.1.0
+
+- **~40 Japanese catchphrases** (up from 14) — organized across energy, celebration, soft/gentle, and debug registers
+- **Anime soul section**: magical girl energy, tsundere flicker, moe flustered moments, senpai/kouhai awareness, anime speech particles (ne~, yo~, naa~), honorifics flavor
+- **Anime kaomoji palette**: 10+ kaomoji added alongside the existing UwU faces — (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧, ヽ(>∀<☆)ノ, (⁄ ⁄>⁄ω⁄<⁄ ⁄), and more
+- **Statusline kaomoji**: the bar now ends with a random anime kaomoji instead of a static ✨
+- **Theme tuning**: `planMode` → warm pink (#FFB3E6), `autoAccept` → aqua-mint (#A8EDEA), `merged` → cooler violet (#B8A9FF)
 
 ## Requirements
 

@@ -39,6 +39,7 @@ except Exception:
 
 # --- the random catchphrase channel ✨ (kana/kanji + romaji) ---
 phrases = [
+    # -- originals --
     "頑張って！(ganbatte!)",
     "やったー！(yatta~!)",
     "できた！(dekita!)",
@@ -53,6 +54,38 @@ phrases = [
     "ファイト！(faito!)",
     "かわいい！(kawaii!)",
     "バグ発見！(bagu hakken!)",
+    # -- energy / momentum --
+    "行くよ！(iku yo!)",
+    "やってみる！(yatte miru!)",
+    "もうちょっと！(mou chotto!)",
+    "ほぼできた！(hobo dekita!)",
+    "いい感じ！(ii kanji!)",
+    "急いで！(isoide!)",
+    "集中〜 (shuuchuu~)",
+    "おまかせあれ！(omakase are!)",
+    "やっぱり！(yappari!)",
+    "さすが！(sasuga!)",
+    # -- celebration / reaction --
+    "きゃー！(kyaa!)",
+    "うれし〜！(ureshi~!)",
+    "最強！(saikyou!)",
+    "神！(kami!)",
+    "素晴らしい！(subarashii!)",
+    "天才！(tensai!)",
+    "やばい！(yabai!)",
+    "感動した〜 (kandou shita~)",
+    # -- gentle / soft --
+    "ごめんね〜 (gomen ne~)",
+    "大丈夫？(daijoubu?)",
+    "無理しないで (muri shinaide)",
+    "ゆっくりね〜 (yukkuri ne~)",
+    "ちょっと待って！(chotto matte!)",
+    "しょうがないか〜 (shouganai ka~)",
+    # -- debug / fix --
+    "あれっ？(are~?)",
+    "原因発見！(gen'in hakken!)",
+    "直した！(naoshita!)",
+    "あぶなかった〜 (abunakatta~)",
 ]
 phrase = random.choice(phrases)
 
@@ -64,11 +97,24 @@ MINT = "\033[38;5;157m"   # mint
 DIM  = "\033[38;5;245m"   # grey separators
 R    = "\033[0m"
 
+kaomoji = [
+    "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
+    "ヽ(>∀<☆)ノ",
+    "(◕‿◕✿)",
+    "٩(◕‿◕｡)۶",
+    "o(≧▽≦)o",
+    "(⌒▽⌒)☆",
+    "(っ◔◡◔)っ♥",
+    "＼(٥⁀▽⁀ )／",
+    "(。♥‿♥。)",
+]
+kmoji = random.choice(kaomoji)
+
 bar = (
     f"{HOT}🎀{R} {PINK}{model}{R} "
     f"{DIM}·{R} {LAV}📁 {cur}{R} "
     f"{DIM}·{R} {MINT}🌸 {pct}%{R} "
-    f"{DIM}·{R} {PINK}{phrase}{R} {HOT}✨{R}"
+    f"{DIM}·{R} {PINK}{phrase}{R} {HOT}{kmoji}{R}"
 )
 
 # force UTF-8 bytes out (LANG may be unset)
