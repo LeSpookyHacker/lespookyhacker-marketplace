@@ -1,40 +1,39 @@
-# LeSpookyHacker — Claude Code plugin marketplace
+# @lespookyhacker — Claude Code plugin marketplace
 
-A personal [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces).
-The marketplace manifest is at [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json);
-plugins live under [`plugins/`](plugins/).
-
-> The marketplace `name` is `lespookyhacker` — the handle users type after `@` when installing
-> (e.g. `girlypop-uwu@lespookyhacker`). Change it in `.claude-plugin/marketplace.json` anytime.
+A personal [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) by LeSpookyHacker.
+The marketplace handle is `lespookyhacker` — used when installing plugins (e.g. `girlypop-uwu@lespookyhacker`).
 
 ## Plugins
 
-| Plugin | Description |
-|--------|-------------|
-| [`girlypop-uwu`](plugins/girlypop-uwu) | Kawaii girly-pop / UwU persona — full engineering power, maximum sparkle 🎀 |
+| Plugin | Description | Version |
+|--------|-------------|---------|
+| [`girlypop-uwu`](plugins/girlypop-uwu/README.md) | Kawaii girly-pop / UwU persona — full engineering power, maximum sparkle 🎀 | 1.0.0 |
 
-
-
-## Use it (on any machine)
+## Install a plugin
 
 ```text
 /plugin marketplace add LeSpookyHacker/girlypop-uwu
-/plugin install girlypop-uwu@lespookyhacker
+/plugin install <plugin-name>@lespookyhacker
 ```
 
-- The first command registers this repo as a marketplace. **Relative-path plugin sources (used here)
-  only resolve when the marketplace is added via git** (GitHub/GitLab/git URL), not via a direct URL
-  to `marketplace.json`.
-- Pull in marketplace updates later with `/plugin marketplace update lespookyhacker`.
+The first command registers this repo as a marketplace source. Pull in updates later with:
 
-## Develop / test locally (no marketplace)
+```text
+/plugin marketplace update lespookyhacker
+```
+
+> Relative-path plugin sources only resolve when the marketplace is added via git (GitHub/GitLab/git URL), not via a direct URL to `marketplace.json`.
+
+## Develop / test locally
 
 ```bash
-claude --plugin-dir ./plugins/girlypop-uwu
+claude --plugin-dir ./plugins/<plugin-name>
+claude plugin validate ./plugins/<plugin-name>
 ```
 
-Validate before publishing:
+## Adding a new plugin
 
-```bash
-claude plugin validate ./plugins/girlypop-uwu
-```
+1. Create a folder under `plugins/<your-plugin-name>/`
+2. Add `.claude-plugin/plugin.json`, `agents/`, `settings.json`, and a `README.md`
+3. Register it in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) under the `plugins` array
+4. Add a row to the table above

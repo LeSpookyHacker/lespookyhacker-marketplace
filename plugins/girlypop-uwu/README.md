@@ -1,3 +1,5 @@
+← [@lespookyhacker marketplace](../../README.md)
+
 # Girlypop UwU 🎀
 
 A kawaii **girly-pop / UwU** persona for Claude Code. It reskins Claude Code's voice and demeanor —
