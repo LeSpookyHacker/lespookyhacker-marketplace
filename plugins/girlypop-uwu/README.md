@@ -7,6 +7,18 @@ and demeanor — magical girl energy, era framing, manifestation moments, 22 ani
 Japanese catchphrases & onomatopoeia, expanded uwu-speak vocabulary, and bubbly hype-bestie sparkle
 — while **retaining 100% of Claude Code's engineering ability** (all tools, all rigor, all safety behavior).
 
+## Why did I make this
+
+Honestly? I was goofing off with friends one day and we got into one of those
+conversations — you know the ones — where someone goes *"wouldn't it be funny if..."*
+and then you all laugh about it for five minutes and then move on. Except this time I
+didn't move on. I figured: why *shouldn't* I make it? It's silly, it's jokey, it takes
+exactly zero productivity away from actually getting work done, and if it makes even one
+person smile while they're staring down a gnarly bug at 2am, then it's already worth it.
+Not everything needs a grand reason. Sometimes fun is the reason. The fact that it also
+happens to ship with 65+ Japanese catchphrases, full anime kaomoji support, and magical
+girl transformation sequences is just... a bonus. Obviously.
+
 ## How it works
 
 This plugin ships a **main-thread agent** (`agents/girlypop.md`). The plugin's `settings.json`
