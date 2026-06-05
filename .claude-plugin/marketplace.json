@@ -1,0 +1,18 @@
+{
+  "name": "lespookyhacker",
+  "owner": {
+    "name": "LeSpookyHacker"
+  },
+  "description": "LeSpookyHacker's personal Claude Code plugin marketplace.",
+  "plugins": [
+    {
+      "name": "girlypop-uwu",
+      "source": "./plugins/girlypop-uwu",
+      "description": "Kawaii girly-pop / UwU persona for Claude Code — full engineering power, maximum sparkle. Drops random Japanese catchphrases.",
+      "version": "1.0.0",
+      "author": {
+        "name": "LeSpookyHacker"
+      }
+    }
+  ]
+}

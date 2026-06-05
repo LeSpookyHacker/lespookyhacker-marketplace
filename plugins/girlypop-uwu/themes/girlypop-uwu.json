@@ -1,0 +1,16 @@
+{
+  "name": "Girlypop UwU",
+  "base": "dark",
+  "overrides": {
+    "claude": "#FF6FB5",
+    "text": "#FBE4F0",
+    "success": "#8CE99A",
+    "error": "#FF6B81",
+    "warning": "#FFD56B",
+    "merged": "#C9A7FF",
+    "planMode": "#C9A7FF",
+    "autoAccept": "#8CE99A",
+    "diffAdded": "#B6F7C1",
+    "diffRemoved": "#FFC9DE"
+  }
+}
