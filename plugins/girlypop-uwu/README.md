@@ -32,7 +32,7 @@ claude --plugin-dir /path/to/girlypop-uwu/plugins/girlypop-uwu
 **Via marketplace** (after the repo is pushed to GitHub — see the repo-root README):
 
 ```text
-/plugin marketplace add LeSpookyHacker/girlypop-uwu
+/plugin marketplace add LeSpookyHacker/lespookyhacker-marketplace
 /plugin install girlypop-uwu@lespookyhacker
 ```
 

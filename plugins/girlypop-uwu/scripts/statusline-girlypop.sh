@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Girlypop UwU status line 🎀  —  model · dir · ctx% · random JP catchphrase
+# Girlypop UwU status line 🎀  —  model · dir · ctx% · random JP catchphrase · random anime kaomoji
 # Claude Code pipes the session JSON in on stdin; we print one pastel line.
 # NOTE: status lines are NOT auto-applied by plugins. To use this, add a
 # `statusLine` block to your OWN ~/.claude/settings.json pointing at this file

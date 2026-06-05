@@ -8,8 +8,8 @@
     {
       "name": "girlypop-uwu",
       "source": "./plugins/girlypop-uwu",
-      "description": "Kawaii girly-pop / UwU persona for Claude Code — full engineering power, maximum sparkle. Drops random Japanese catchphrases.",
-      "version": "1.0.0",
+      "description": "Kawaii girly-pop / UwU + anime-flavored persona — magical girl energy, anime kaomoji, 40+ Japanese catchphrases, tsundere flickers. Full engineering power, maximum sparkle.",
+      "version": "1.1.0",
       "author": {
         "name": "LeSpookyHacker"
       }

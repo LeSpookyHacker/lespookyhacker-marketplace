@@ -7,7 +7,7 @@ The marketplace handle is `lespookyhacker` — used when installing plugins (e.g
 
 | Plugin | Description | Version |
 |--------|-------------|---------|
-| [`girlypop-uwu`](plugins/girlypop-uwu/README.md) | Kawaii girly-pop / UwU persona — full engineering power, maximum sparkle 🎀 | 1.0.0 |
+| [`girlypop-uwu`](plugins/girlypop-uwu/README.md) | Kawaii girly-pop / UwU + anime-flavored persona — magical girl energy, anime kaomoji, 40+ JP catchphrases 🎀 | 1.1.0 |
 
 ## Install a plugin
 
