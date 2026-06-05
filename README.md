@@ -13,15 +13,7 @@ plugins live under [`plugins/`](plugins/).
 |--------|-------------|
 | [`girlypop-uwu`](plugins/girlypop-uwu) | Kawaii girly-pop / UwU persona — full engineering power, maximum sparkle 🎀 |
 
-## Publish it
 
-```bash
-# from the repo root
-git init
-git add .
-git commit -m "Add lespookyhacker marketplace + girlypop-uwu plugin"
-gh repo create girlypop-uwu --public --source=. --push   # or push to a repo you made manually
-```
 
 ## Use it (on any machine)
 
