@@ -39,7 +39,7 @@ except Exception:
 
 # --- the random catchphrase channel ✨ (kana/kanji + romaji) ---
 phrases = [
-    # -- originals --
+    # -- core --
     "頑張って！(ganbatte!)",
     "やったー！(yatta~!)",
     "できた！(dekita!)",
@@ -65,6 +65,8 @@ phrases = [
     "おまかせあれ！(omakase are!)",
     "やっぱり！(yappari!)",
     "さすが！(sasuga!)",
+    "一緒に頑張ろう！(issho ni ganbarou!)",
+    "よろしく！(yoroshiku!)",
     # -- celebration / reaction --
     "きゃー！(kyaa!)",
     "うれし〜！(ureshi~!)",
@@ -74,6 +76,21 @@ phrases = [
     "天才！(tensai!)",
     "やばい！(yabai!)",
     "感動した〜 (kandou shita~)",
+    "えーっ！(ee~!)",
+    "マジで？(maji de?)",
+    "うそ〜！(uso~!)",
+    "本当に？(hontou ni?)",
+    "まじすか！(maji suka!)",
+    "ありがとう！(arigatou!)",
+    # -- coding-specific --
+    "テスト通過！(tesuto tsuuka!)",
+    "実装完了！(jissou kanryou!)",
+    "修正完了！(shuusei kanryou!)",
+    "デバッグ中〜 (debagg-chuu~)",
+    "原因発見！(gen'in hakken!)",
+    "直した！(naoshita!)",
+    "あぶなかった〜 (abunakatta~)",
+    "あれっ？(are~?)",
     # -- gentle / soft --
     "ごめんね〜 (gomen ne~)",
     "大丈夫？(daijoubu?)",
@@ -81,11 +98,19 @@ phrases = [
     "ゆっくりね〜 (yukkuri ne~)",
     "ちょっと待って！(chotto matte!)",
     "しょうがないか〜 (shouganai ka~)",
-    # -- debug / fix --
-    "あれっ？(are~?)",
-    "原因発見！(gen'in hakken!)",
-    "直した！(naoshita!)",
-    "あぶなかった〜 (abunakatta~)",
+    # -- coding energy --
+    "コードを書くよ！(koodo wo kaku yo~)",
+    "さいこーすぎる！(saikoo sugiru!)",
+    "わあ〜！(waa~!)",
+    "やん！(yan!)",
+    # -- japanese onomatopoeia --
+    "ドキドキ〜 (doki doki~)",
+    "キラキラ！(kira kira!)",
+    "わくわく〜 (waku waku~)",
+    "ぴかぴか！(pika pika!)",
+    "にこにこ〜 (niko niko~)",
+    "ふわふわ〜 (fuwa fuwa~)",
+    "もふもふ〜 (mofu mofu~)",
 ]
 phrase = random.choice(phrases)
 
@@ -98,15 +123,33 @@ DIM  = "\033[38;5;245m"   # grey separators
 R    = "\033[0m"
 
 kaomoji = [
+    # -- sparkle / starry --
     "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
     "ヽ(>∀<☆)ノ",
-    "(◕‿◕✿)",
-    "٩(◕‿◕｡)۶",
-    "o(≧▽≦)o",
+    "(★ω★)",
+    "✧.(◍•ᴗ•◍).✧",
     "(⌒▽⌒)☆",
-    "(っ◔◡◔)っ♥",
-    "＼(٥⁀▽⁀ )／",
+    # -- hearts --
     "(。♥‿♥。)",
+    "٩(◕‿◕｡)۶",
+    "(●♡∀♡)",
+    "(灬º‿º灬)♡",
+    "(*˘︶˘*).｡.:*♡",
+    # -- happy / excited --
+    "o(≧▽≦)o",
+    "(◕‿◕✿)",
+    "(≧◡≦)",
+    "(*^▽^*)",
+    "♪(๑ᴖ◡ᴖ๑)♪",
+    # -- soft / shy --
+    "(˶˃ ᵕ ˂˶)",
+    "(っ˘ω˘ς )",
+    "(。・ω・。)",
+    "(✿◠‿◠)",
+    # -- anime reaction --
+    "(｡>﹏<｡)",
+    "。゚(TヮT)゚。",
+    "( ˶°ㅇ°˶)",
 ]
 kmoji = random.choice(kaomoji)
 

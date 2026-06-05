@@ -3,9 +3,9 @@
 # Girlypop UwU 🎀
 
 A kawaii **girly-pop / UwU + anime-flavored** persona for Claude Code. It reskins Claude Code's voice
-and demeanor — magical girl energy, anime kaomoji, ~40 Japanese catchphrases, light anime speech
-patterns, and bubbly hype-bestie sparkle — while **retaining 100% of Claude Code's engineering
-ability** (all tools, all rigor, all safety behavior).
+and demeanor — magical girl energy, era framing, manifestation moments, 22 anime kaomoji, 65+
+Japanese catchphrases & onomatopoeia, expanded uwu-speak vocabulary, and bubbly hype-bestie sparkle
+— while **retaining 100% of Claude Code's engineering ability** (all tools, all rigor, all safety behavior).
 
 ## How it works
 
@@ -78,8 +78,30 @@ plugin, so reference it via the plugin-root variable:
 > ```
 
 The bar shows `🎀 model · 📁 dir · 🌸 ctx% · <random Japanese catchphrase> <random anime kaomoji>`.
-The phrase pool has ~40 entries; the kaomoji rotates through a curated set of 9. Requires `python3`
+The phrase pool has 65 entries (including 7 onomatopoeia); the kaomoji rotates through 22 curated
+faces across sparkle, heart, happy, soft, and anime-reaction categories. Requires `python3`
 (used to parse the session JSON and force UTF-8 output).
+
+## What's new in v1.2.0
+
+- **65+ Japanese catchphrases** (up from 42) — new sections for coding-specific phrases,
+  togetherness phrases (一緒に頑張ろう！, よろしく！), celebration reactions (えーっ！, まじすか！,
+  ありがとう！), and a full **Japanese onomatopoeia** tier (ドキドキ, キラキラ, わくわく, ぴかぴか,
+  にこにこ, ふわふわ, もふもふ)
+- **Expanded girlypop slang**: era framing, manifestation moments, "snatched", "quiet luxury",
+  "brat coded", "mother", "vibe check", "the girls are thriving", "no cap", "lowkey/highkey", "based"
+- **Richer uwu-speak rules**: explicit vocabulary list — "hewwo~", "haii~", "tehehe~", stutter
+  patterns (b-but~, w-wait~), prose sound effects (*squeaks*, *bounces*, *sparkles*, *wiggles*)
+- **5 new behavioral rules**: Era Framing, Manifestation Moment, Vibe Check, Codebase as Garden,
+  Self-Care Check-In — all with frequency caps and "read the room" guards
+- **Japanese onomatopoeia inline rule**: ドキドキ for nervousness, キラキラ for elegant code,
+  わくわく for excitement — used naturally in prose (1 per message max)
+- **~すぎる！(sugiru) emphasis pattern** and **だもん！(damon) / じゃん！(jan)** sentence endings
+- **Expanded sentence-final particles**: wa~, ze~, zo~, mon~ alongside the existing set
+- **22 kaomoji** in the statusline (up from 9) — five themed tiers: sparkle/starry, hearts,
+  happy/excited, soft/shy, anime-reaction
+- **Expanded emoji palette**: 🦋🌺🌷🌻🍓🧁🎂🩰👑💎🫧🌈🎵🎶🎐🎏🪄🔮💌🧸💝💗💓💕🌟🌠
+- **Expanded address list**: "girlie", "luv", "star", "honey" alongside existing nicknames
 
 ## What's new in v1.1.0
 
