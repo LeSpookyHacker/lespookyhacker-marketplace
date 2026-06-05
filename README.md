@@ -12,7 +12,7 @@ The marketplace handle is `lespookyhacker` — used when installing plugins (e.g
 ## Install a plugin
 
 ```text
-/plugin marketplace add LeSpookyHacker/girlypop-uwu
+/plugin marketplace add LeSpookyHacker/lespookyhacker-marketplace
 /plugin install <plugin-name>@lespookyhacker
 ```
 
