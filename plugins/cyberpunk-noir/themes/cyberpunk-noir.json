@@ -1,0 +1,16 @@
+{
+  "name": "Cyberpunk Noir",
+  "base": "dark",
+  "overrides": {
+    "claude": "#00F0FF",
+    "text": "#C8F7FF",
+    "success": "#39FF14",
+    "error": "#FF2A6D",
+    "warning": "#FFB000",
+    "merged": "#BD00FF",
+    "planMode": "#00F0FF",
+    "autoAccept": "#39FF14",
+    "diffAdded": "#1BE3B2",
+    "diffRemoved": "#FF2A6D"
+  }
+}

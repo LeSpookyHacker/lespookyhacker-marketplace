@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+# Cyberpunk Noir status line ⚡  —  model · dir · ctx% · random NC one-liner · random glitch glyph
+# Claude Code pipes the session JSON in on stdin; we print one neon line.
+# NOTE: status lines are NOT auto-applied by plugins. To use this, add a
+# `statusLine` block to your OWN ~/.claude/settings.json pointing at this file
+# (see the plugin README for the exact snippet).
+export PYTHONIOENCODING=utf-8
+
+# Capture stdin (the session JSON) FIRST, then feed the PROGRAM to python via the
+# heredoc. python reads its program from the heredoc, so the JSON must arrive via
+# an env var, not stdin — otherwise the two would collide.
+CC_INPUT="$(cat)"
+export CC_INPUT
+
+python3 <<'PY'
+import os, json, random, sys
+
+# --- parse session JSON (every field has a safe fallback) ---
+try:
+    d = json.loads(os.environ.get("CC_INPUT") or "{}")
+except Exception:
+    d = {}
+
+model = (d.get("model") or {}).get("display_name") or "Claude"
+
+ws = d.get("workspace") or {}
+cur = ws.get("current_dir") or os.getcwd()
+home = os.path.expanduser("~")
+if cur.startswith(home):
+    cur = "~" + cur[len(home):]
+cur = os.path.basename(cur.rstrip("/")) or cur
+
+cw = d.get("context_window") or {}
+pct = cw.get("used_percentage", 0)
+try:
+    pct = int(float(pct))
+except Exception:
+    pct = 0
+
+# --- the random Night City one-liner channel ⚡ ---
+phrases = [
+    # -- rockerboy / defiance --
+    "Wake the f*** up, Samurai",
+    "We got a city to burn",
+    "Never fade away",
+    "Burn corpo down",
+    "No future? Make one",
+    "Chippin' in",
+    # -- run status --
+    "Jacking in...",
+    "Daemon deployed",
+    "ICE is light",
+    "Trace running — move",
+    "Breach successful",
+    "Flatlined the bug",
+    "Process zeroed",
+    "Netrun clean",
+    "Output secured",
+    # -- detective / noir --
+    "Rain's not stopping",
+    "The city talks, I listen",
+    "Neon never sleeps",
+    "Smoke and static",
+    "Somewhere a siren",
+    # -- merc slang --
+    "Preem work, choom",
+    "That's nova",
+    "Solid chrome",
+    "Delta out",
+    "Eyes on the prize, merc",
+    "Easy, choom",
+    "Eddies earned",
+    "We delta out clean",
+    # -- atmosphere --
+    "Night City online",
+    "Welcome to the badlands",
+    "Edgerunner mode",
+    "Lights down, terminal up",
+]
+phrase = random.choice(phrases)
+
+# --- 256-color neon-noir palette ---
+CYAN = "\033[38;5;51m"    # neon cyan
+MAG  = "\033[38;5;201m"   # hot magenta
+AMBER= "\033[38;5;214m"   # amber
+GREEN= "\033[38;5;47m"    # acid green
+DIM  = "\033[38;5;240m"   # grey separators
+R    = "\033[0m"
+
+glyphs = [
+    "▓▒░",
+    "⚡",
+    "[//]",
+    ">>",
+    "▚▞▚",
+    "███",
+    "01",
+    "<>",
+    "::",
+    "▛▜",
+    "λ",
+    "☣",
+]
+glyph = random.choice(glyphs)
+
+bar = (
+    f"{CYAN}⚡{R} {MAG}{model}{R} "
+    f"{DIM}//{R} {CYAN}▸ {cur}{R} "
+    f"{DIM}//{R} {GREEN}▰ {pct}%{R} "
+    f"{DIM}//{R} {AMBER}{phrase}{R} {MAG}{glyph}{R}"
+)
+
+# force UTF-8 bytes out (LANG may be unset)
+try:
+    sys.stdout.buffer.write(bar.encode("utf-8") + b"\n")
+except Exception:
+    print(bar)
+PY
