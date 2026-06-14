@@ -38,3 +38,9 @@ claude plugin validate ./plugins/<plugin-name>
 2. Add `.claude-plugin/plugin.json`, `agents/`, `settings.json`, and a `README.md`
 3. Register it in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) under the `plugins` array
 4. Add a row to the table above
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
